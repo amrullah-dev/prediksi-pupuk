@@ -1,0 +1,400 @@
+/* ==========================================
+            PROFILE WRAPPER
+========================================== */
+
+.profile-wrapper{
+
+    display:flex;
+    justify-content:center;
+
+    margin-top:30px;
+    margin-bottom:40px;
+
+}
+
+
+/* ==========================================
+            PROFILE CARD
+========================================== */
+
+.profile-card{
+
+    width:100%;
+    max-width:700px;
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    overflow:hidden;
+
+}
+
+
+/* ==========================================
+            HEADER
+========================================== */
+
+.profile-header{
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    background:#f8faf9;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+
+.profile-avatar{
+
+    width:90px;
+    height:90px;
+
+    margin:0 auto 18px;
+
+    border-radius:50%;
+
+    background:#1F6B45;
+
+    color:#ffffff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:36px;
+    font-weight:700;
+
+}
+
+
+.profile-name{
+
+    font-size:24px;
+
+    color:#1F2937;
+
+    font-weight:700;
+
+}
+
+
+/* ==========================================
+            BODY
+========================================== */
+
+.profile-body{
+
+    padding:35px;
+
+}
+
+
+.profile-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+    border-bottom:1px solid #eeeeee;
+
+}
+
+
+.profile-item:last-child{
+
+    border-bottom:none;
+
+}
+
+
+.profile-label{
+
+    color:#6B7280;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+
+.profile-value{
+
+    color:#111827;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================
+            BUTTON
+========================================== */
+
+.profile-actions{
+
+    padding:30px;
+
+    border-top:1px solid #eeeeee;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+.btn-edit-profile{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 28px;
+
+    border-radius:10px;
+
+    background:#1F6B45;
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+
+.btn-edit-profile:hover{
+
+    background:#184F34;
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+            FORM
+========================================== */
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:22px;
+
+}
+
+.form-group label{
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#4B5563;
+
+}
+
+.form-group input{
+
+    height:48px;
+
+    border:1px solid #D1D5DB;
+
+    border-radius:10px;
+
+    padding:0 15px;
+
+    font-size:15px;
+
+    transition:.25s;
+
+}
+
+.form-group input:focus{
+
+    outline:none;
+
+    border-color:#1F6B45;
+
+    box-shadow:0 0 0 3px rgba(31,107,69,.15);
+
+}
+
+
+/* ==========================================
+            BUTTON
+========================================== */
+
+.btn-cancel{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-decoration:none;
+
+    padding:12px 28px;
+
+    border-radius:10px;
+
+    border:1px solid #D1D5DB;
+
+    color:#374151;
+
+    font-weight:600;
+
+    margin-right:12px;
+
+    transition:.25s;
+
+}
+
+.btn-cancel:hover{
+
+    background:#F3F4F6;
+
+}
+
+/* ==========================================
+            VALIDATION
+========================================== */
+
+.is-invalid{
+
+    border-color:#DC2626 !important;
+
+}
+
+.error-text{
+
+    margin-top:6px;
+
+    color:#DC2626;
+
+    font-size:13px;
+
+    font-weight:500;
+
+}
+
+/* ==========================================
+            SUCCESS ALERT
+========================================== */
+
+.success-alert{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    max-width:700px;
+
+    margin:0 auto 25px;
+
+    padding:18px 20px;
+
+    border-left:5px solid #16A34A;
+
+    border-radius:12px;
+
+    background:#ECFDF5;
+
+    color:#166534;
+
+    box-shadow:0 6px 20px rgba(0,0,0,.06);
+
+}
+
+.success-alert i{
+
+    font-size:28px;
+
+}
+
+.success-alert strong{
+
+    display:block;
+
+    margin-bottom:4px;
+
+}
+
+.success-alert p{
+
+    margin:0;
+
+}
+
+/* ==========================================
+            PASSWORD INPUT
+========================================== */
+
+.password-wrapper{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+
+.password-wrapper input{
+
+    width:100%;
+
+    padding-right:50px;
+
+}
+
+
+.toggle-password{
+
+    position:absolute;
+
+    right:15px;
+
+    border:none;
+
+    background:transparent;
+
+    cursor:pointer;
+
+    color:#6B7280;
+
+    font-size:16px;
+
+    transition:.25s;
+
+}
+
+
+.toggle-password:hover{
+
+    color:#1F6B45;
+
+}

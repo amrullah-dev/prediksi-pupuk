@@ -1,0 +1,1261 @@
+/* =====================================================
+                    ROOT VARIABLES
+===================================================== */
+
+:root{
+
+    --primary:#18452F;
+    --primary-light:#2E6F55;
+    --primary-hover:#21573A;
+
+    --white:#FFFFFF;
+    --background:#F5F7FA;
+
+    --border:#E5E7EB;
+
+    --text:#1F2937;
+    --text-light:#6B7280;
+
+    --shadow:0 18px 45px rgba(0,0,0,.08);
+
+    --radius:24px;
+
+    --transition:.30s ease;
+
+}
+
+/* =====================================================
+                        RESET
+===================================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:
+        "Segoe UI",
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #F8FAFC,
+        #EEF3F7
+    );
+
+    color:var(--text);
+
+    width:100%;
+
+    height:100%;
+
+    overflow:hidden;
+
+    min-height:100vh;
+
+}
+
+/* =====================================================
+                    LOGIN CONTAINER
+===================================================== */
+
+.login-container{
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:18px;
+    overflow:hidden;
+
+}
+
+/* =====================================================
+                    LOGIN WRAPPER
+===================================================== */
+
+.login-container::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    border-radius:50%;
+
+    background:rgba(24,69,47,.04);
+
+    top:-250px;
+    left:-250px;
+
+    z-index:-1;
+
+}
+
+.login-container::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    border-radius:50%;
+
+    background:rgba(24,69,47,.05);
+
+    right:-180px;
+    bottom:-180px;
+
+    z-index:-1;
+
+}
+
+/* =====================================================
+                    LEFT PANEL
+===================================================== */
+
+.login-left{
+
+    width:42%;
+    height:100%;
+
+    background:linear-gradient(
+        180deg,
+        #18452F,
+        #24543C
+    );
+
+    border-radius:
+        var(--radius)
+        0
+        0
+        var(--radius);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:70px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* =====================================================
+                BACKGROUND PATTERN
+===================================================== */
+
+.login-left::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:380px;
+    height:380px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.05);
+
+    right:-120px;
+    top:-120px;
+
+}
+
+.login-left::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+    height:260px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.04);
+
+    left:-100px;
+    bottom:-80px;
+
+}
+
+/* =====================================================
+                        BRAND
+===================================================== */
+
+.brand{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    color:white;
+
+    animation:fadeBrand .8s ease;
+
+}
+
+/* =====================================================
+                        LOGO
+===================================================== */
+
+.logo-circle{
+
+    width:120px;
+    height:120px;
+
+    margin:auto;
+    margin-bottom:35px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.15);
+
+    border:2px solid rgba(255,255,255,.35);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:42px;
+    font-weight:700;
+
+    letter-spacing:3px;
+
+    backdrop-filter:blur(12px);
+
+    transition:var(--transition);
+
+}
+
+.logo-circle img{
+
+    width:120px;
+
+    height:120px;
+
+    object-fit:contain;
+
+    display:block;
+
+}
+
+.logo-circle:hover{
+
+    transform:translateY(-4px);
+
+    background:rgba(255,255,255,.20);
+
+}
+
+/* =====================================================
+                    COMPANY NAME
+===================================================== */
+
+.brand h1{
+
+    font-size:32px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    margin-bottom:18px;
+
+}
+
+/* =====================================================
+                        LINE
+===================================================== */
+
+.line{
+
+    width:80px;
+    height:4px;
+
+    margin:auto;
+
+    background:white;
+
+    border-radius:10px;
+
+    opacity:.85;
+
+    margin-bottom:35px;
+
+}
+
+/* =====================================================
+                    SYSTEM TITLE
+===================================================== */
+
+.brand h2{
+
+    font-size:24px;
+
+    line-height:38px;
+
+    font-weight:600;
+
+    margin-bottom:35px;
+
+}
+
+/* =====================================================
+                        ICON
+===================================================== */
+
+.brand-icon{
+
+    width:72px;
+    height:72px;
+
+    margin:auto;
+    margin-bottom:30px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:28px;
+
+    border:1px solid rgba(255,255,255,.25);
+
+}
+
+/* =====================================================
+                    DESCRIPTION
+===================================================== */
+
+.brand p{
+
+    font-size:17px;
+
+    line-height:32px;
+
+    opacity:.90;
+
+    max-width:420px;
+
+    margin:auto;
+
+}
+
+/* =====================================================
+                    ANIMATION
+===================================================== */
+
+@keyframes fadeBrand{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =====================================================
+                    RIGHT PANEL
+===================================================== */
+
+.login-right{
+
+    width:58%;
+    height:100%;
+
+    background:var(--white);
+
+    border-radius:
+        0
+        var(--radius)
+        var(--radius)
+        0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:70px;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* =====================================================
+                    LOGIN BOX
+===================================================== */
+
+.login-box{
+
+    width:100%;
+    max-width:460px;
+
+    animation:fadeLogin .8s ease;
+
+}
+
+/* =====================================================
+                    HEADING
+===================================================== */
+
+.login-box h2{
+
+    font-size:38px;
+
+    font-weight:700;
+
+    color:var(--text);
+
+    margin-bottom:12px;
+
+}
+
+.login-box p{
+
+    color:var(--text-light);
+
+    font-size:16px;
+
+    margin-bottom:40px;
+
+    line-height:28px;
+
+}
+
+/* =====================================================
+                    INPUT GROUP
+===================================================== */
+
+.input-group{
+
+    margin-bottom:28px;
+
+}
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+/* =====================================================
+                    INPUT BOX
+===================================================== */
+
+.input-box{
+
+    display:flex;
+    align-items:center;
+
+    height:58px;
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:0 18px;
+
+    transition:var(--transition);
+
+    background:white;
+
+}
+
+.input-box:hover{
+
+    border-color:#C7D2D9;
+
+}
+
+.input-box:focus-within{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 0 4px rgba(24,69,47,.08);
+
+}
+
+/* =====================================================
+                    INPUT ICON
+===================================================== */
+
+.input-box i{
+
+    color:#94A3B8;
+
+    font-size:18px;
+
+}
+
+/* =====================================================
+                    INPUT
+===================================================== */
+
+.input-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:none;
+
+    padding:0 15px;
+
+    font-size:15px;
+
+    color:var(--text);
+
+}
+
+.input-box input::placeholder{
+
+    color:#9CA3AF;
+
+}
+
+/* =====================================================
+                SHOW PASSWORD
+===================================================== */
+
+.toggle-password{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    color:#94A3B8;
+
+    transition:var(--transition);
+
+    font-size:18px;
+
+}
+
+.toggle-password:hover{
+
+    color:var(--primary);
+
+}
+
+/* =====================================================
+                REMEMBER ME
+===================================================== */
+
+.remember{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-top:-6px;
+
+    margin-bottom:28px;
+
+}
+
+.remember label{
+
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    color:var(--text-light);
+
+}
+
+.remember input{
+
+    width:16px;
+    height:16px;
+
+    accent-color:var(--primary);
+
+}
+
+/* =====================================================
+                    LOGIN BUTTON
+===================================================== */
+
+.login-btn{
+
+    width:100%;
+    height:58px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.login-btn:hover{
+
+    background:var(--primary-hover);
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 25px rgba(24,69,47,.18);
+
+}
+
+.login-btn:active{
+
+    transform:scale(.98);
+
+}
+
+/* =====================================================
+                FORGOT PASSWORD
+===================================================== */
+
+.forgot-password{
+
+    text-align:right;
+
+    margin-top:22px;
+
+}
+
+.forgot-password a{
+
+    text-decoration:none;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.forgot-password a:hover{
+
+    color:var(--primary-hover);
+
+}
+
+/* =====================================================
+                    COPYRIGHT
+===================================================== */
+
+.copyright{
+
+    margin-top:55px;
+
+    text-align:center;
+
+    color:#94A3B8;
+
+    font-size:14px;
+
+    line-height:24px;
+
+}
+
+/* =====================================================
+                    LOGIN ANIMATION
+===================================================== */
+
+@keyframes fadeLogin{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+/* =====================================================
+                    RESPONSIVE 1400px
+===================================================== */
+
+@media (max-width:1400px){
+
+    .login-left{
+
+        padding:55px;
+
+    }
+
+    .login-right{
+
+        padding:55px;
+
+    }
+
+    .brand h1{
+
+        font-size:28px;
+
+    }
+
+    .brand h2{
+
+        font-size:22px;
+
+        line-height:34px;
+
+    }
+
+}
+
+/* =====================================================
+                    RESPONSIVE 1200px
+===================================================== */
+
+@media (max-width:1200px){
+
+    .login-container{
+
+        padding:25px;
+
+    }
+
+    .login-left{
+
+        width:45%;
+
+        padding:45px;
+
+    }
+
+    .login-right{
+
+        width:55%;
+
+        padding:45px;
+
+    }
+
+    .brand h1{
+
+        font-size:25px;
+
+    }
+
+    .brand h2{
+
+        font-size:20px;
+
+        line-height:32px;
+
+    }
+
+    .logo-circle{
+
+        width:100px;
+        height:100px;
+
+        font-size:34px;
+
+    }
+
+}
+
+
+/* =====================================================
+                    RESPONSIVE 1200px
+===================================================== */
+
+@media (max-height: 720px){
+
+    .login-left{
+
+        padding:40px;
+
+    }
+
+    .login-right{
+
+        padding:40px;
+
+    }
+
+    .logo-circle{
+
+        width:90px;
+        height:90px;
+
+        font-size:32px;
+
+    }
+
+    .brand h1{
+
+        font-size:26px;
+
+    }
+
+    .brand h2{
+
+        font-size:18px;
+
+        line-height:30px;
+
+    }
+
+    .brand p{
+
+        font-size:15px;
+
+        line-height:28px;
+
+    }
+
+    .login-box h2{
+
+        font-size:32px;
+        padding-top: 50px;
+
+    }
+
+}
+
+/* =====================================================
+                    RESPONSIVE TABLET
+===================================================== */
+
+@media (max-width:992px){
+
+    .login-container{
+
+        flex-direction:column;
+
+        padding:30px;
+
+    }
+
+    .login-left{
+
+        width:100%;
+
+        min-height:330px;
+
+        border-radius:24px 24px 0 0;
+
+    }
+
+    .login-right{
+
+        width:100%;
+
+        min-height:auto;
+
+        border-radius:0 0 24px 24px;
+
+    }
+
+    .brand p{
+
+        max-width:100%;
+
+    }
+
+}
+
+/* =====================================================
+                    RESPONSIVE MOBILE
+===================================================== */
+
+@media (max-width:768px){
+
+    body{
+
+        background:#F5F7FA;
+
+    }
+
+    .login-container{
+
+        padding:20px;
+
+    }
+
+    .login-left{
+
+        display:none;
+
+    }
+
+    .login-right{
+
+        width:100%;
+
+        min-height:100vh;
+
+        border-radius:22px;
+
+        padding:35px 28px;
+
+        box-shadow:none;
+
+    }
+
+    .login-box{
+
+        max-width:100%;
+
+    }
+
+    .login-box h2{
+
+        font-size:32px;
+
+    }
+
+}
+
+/* =====================================================
+                SMALL MOBILE
+===================================================== */
+
+@media (max-width:480px){
+
+    .login-right{
+
+        padding:30px 22px;
+
+    }
+
+    .login-box h2{
+
+        font-size:28px;
+
+    }
+
+    .login-box p{
+
+        font-size:15px;
+
+    }
+
+    .input-box{
+
+        height:54px;
+
+    }
+
+    .login-btn{
+
+        height:54px;
+
+    }
+
+    .copyright{
+
+        margin-top:40px;
+
+        font-size:13px;
+
+    }
+
+}
+
+/* =====================================================
+                INPUT AUTOFILL
+===================================================== */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus{
+
+    -webkit-box-shadow:0 0 0px 1000px white inset;
+
+    -webkit-text-fill-color:#1F2937;
+
+    transition:background-color 9999s ease-in-out 0s;
+
+}
+
+/* =====================================================
+                SELECTION
+===================================================== */
+
+::selection{
+
+    background:#18452F;
+
+    color:white;
+
+}
+
+/* =====================================================
+                SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#F3F4F6;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#C7D2D9;
+
+    border-radius:30px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#9CA3AF;
+
+}
+
+/* =====================================================
+                INPUT TRANSITION
+===================================================== */
+
+input{
+
+    transition:.25s ease;
+
+}
+
+button{
+
+    transition:.25s ease;
+
+}
+
+a{
+
+    transition:.25s ease;
+
+}
+
+/* =====================================================
+                BUTTON LOADING
+===================================================== */
+
+.login-btn.loading{
+
+    pointer-events:none;
+
+    opacity:.85;
+
+}
+
+/* =====================================================
+                FADE PAGE
+===================================================== */
+
+.login-container{
+
+    animation:pageFade .6s ease;
+
+}
+
+@keyframes pageFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =====================================================
+                    ALERT ERROR
+===================================================== */
+
+.alert-error{
+
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:14px 18px;
+
+    margin-bottom:28px;
+
+    background:#FEF2F2;
+
+    border:1px solid #FECACA;
+
+    color:#B91C1C;
+
+    border-radius:14px;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+
+.alert-error i{
+
+    font-size:16px;
+
+}
+
+/* =====================================================
+                    INPUT ERROR
+===================================================== */
+
+.input-error{
+
+    display:block;
+
+    margin-top:8px;
+
+    margin-left:4px;
+
+    color:#DC2626;
+
+    font-size:13px;
+
+    font-weight:500;
+
+}
+
+/* =====================================================
+                INPUT ERROR BORDER
+===================================================== */
+
+.input-group.has-error .input-box{
+
+    border-color:#DC2626;
+
+}
+
+.input-group.has-error .input-box:focus-within{
+
+    box-shadow:0 0 0 4px rgba(220,38,38,.08);
+
+}
+
+/* =====================================================
+                SUCCESS MESSAGE
+===================================================== */
+
+.alert-success{
+
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:14px 18px;
+
+    margin-bottom:28px;
+
+    background:#ECFDF5;
+
+    border:1px solid #A7F3D0;
+
+    color:#065F46;
+
+    border-radius:14px;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+
+.alert-success i{
+
+    font-size:16px;
+
+}
